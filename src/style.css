@@ -1,34 +1,92 @@
-* {
+*
+.style {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body {
-    background-color: red;
-
+.titulo {
     text-align: center;
-    color:teal;
-    font-family: Roboto, sans-serif;}
 
-.container {
-    width: 90%;
-    max-width: 100px;
-    padding: 40px 20 px;
-    margin: auto;
+}
+
+
+body {
+    background: rgb(116,240,242);
+background: -moz-radial-gradient(circle, rgba(116,240,242,1) 0%, rgba(231,159,224,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(116,240,242,1) 0%, rgba(231,159,224,1) 100%);
+background: radial-gradient(circle, rgba(116,240,242,1) 0%, rgba(231,159,224,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#74f0f2",endColorstr="#e79fe0",GradientType=1);
+color: rgb(27, 133, 127);
+}
+
+
+.main-container {
+    background-image: url(Diseño\ tarjeta.jpg);
+    background-position: center;
+    margin: auto;   
+    margin-top: 20px;
+    border-radius: 10px;
+    border-width: 5px;
+    border-style: groove round;   
+    border-style: hidden;
+    margin: 30px 400px 4px  ; 
+
+
+}
+
+.datos {
+    text-align: left;
+    margin-left: 15px;
+    margin-block-end: 10px;
+
+}
+
+
+.visa {
+    border-style: round;
+    width: 80px;
+    margin-left: 380px;
+    margin-top: 8px;
+}
+
+.expiracion {
+    text-align: center;
+    padding-right: 15px;
+}
+
+input::placeholder{
+    text-align: center;
+}
+
+.button {
+    background-color: rgb(132, 209, 223);
+    color: rgb(145, 55, 125);
+    padding-bottom: 10px;
+    text-align: start;
+    padding-left: 30px ;
+    border-radius: 55px;
+    border-color: rgb(195, 216, 79);
+    height:20px; 
+    width:100px;     height:20px; 
+    width:100px; 
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+    margin: -20px -50px; 
+    position:relative;
+    top:50%; 
+    left:50%;
+
+}
+
+.prueba {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.delantera .grupo.label {
-    font-size: 16p;
-    color: beige;
-    margin-bottom: 5px;
-}
-
-.delantera.flexbox {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
+.result {
+    text-align: center;
 }
