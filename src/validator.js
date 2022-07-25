@@ -5,19 +5,22 @@ const validator = {
     let numSum = 0;
     let value;
     /* acá se cambia el valor de los values pares y se suman los dígitos si la suma es mayor o igual a 10 */
-    for (let i = 0; i < 16; ++i) {
+  // Revisando inputNumero
+    console.log("rv ",inputNumero)
+    for (let i = 0; i < inputNumero.length; ++i) {
           if (i % 2 == 0) {
               value = 2*inputNumero[i];
               if (value >= 10) {
-                value = (Math.floor(value / 10) + (value % 10));  
+                value = (Math.round(value / 10) + (value % 10));  
               }
           } 
           else {
-              value = +inputNumero[i];
+              value =+inputNumero[i];
           }
+          console.log("value", value)
           numSum += value;
     }
-    
+        console.log("rv2",numSum)
     /* si el módulo de la suma dividido en 10 es 0 entonces la tarjeta es válida */      
     if (numSum%10==0) {
           return true;
@@ -32,7 +35,8 @@ const validator = {
     /* acá el array se divide en dos: primero se divide todo menos los últimos 4 números para enmascarar */
     let maskedCc = inputNumero.slice(0, inputNumero.length-4);
     let arrayMasked = [];
-    let lastFour = inputNumero.slice(-4).join('');
+    console.log(inputNumero.slice(-4));
+    let lastFour = inputNumero.slice(-4);
     
     if (inputNumero.length <= 4){
       return lastFour;
